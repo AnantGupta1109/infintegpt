@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: 'Inter';
+    margin: 0;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 205, 71, 0.832);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 9999; /* Ensures splash screen is on top */
+}
+
+.chat {
+    
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 52%;
+    padding: 20px 7px 20px 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(205, 205, 205, 0.113);
+}
+
+
+.list {
+    overflow: hidden; /* Prevent overflow outside the chat container */
+    height: 100%; /* Ensure list fills chat container */
+    box-sizing: border-box; /* Ensure padding and border are included in height */
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr; /* One column */
+    grid-auto-rows: min-content; /* Adjust rows to fit content */    padding: 20px 30px 20px 45px;
+    width: 90%;
+
+    gap: 5px; /* Use gap to control spacing */
+    margin: 10px; /* Remove margin from the list */
+    list-style-type: none; /* Remove default bullets */
+}
+
+ul::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+ul::-webkit-scrollbar-track {
+    background: #ffffff00; /* Background of the track */
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #9d9d9d50; /* Color of the scrollbar */
+    border-radius: 5px; /* Rounded corners */
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+    background: #9c9c9c; /* Color when hovering */
+}
+
+li{
+    min-height: 60px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    max-width: 80%;
+    margin: 10px 0; /* Reduced vertical margin */
+    padding: 20px; /* Adjusted padding */    
+    word-wrap: break-word; /* Break long words to prevent overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.user {
+
+    justify-self: right;
+    border-radius: 20px;
+    background-color: rgb(234, 234, 234);
+    color: rgb(0, 0, 0);
+}
+
+.com {
+    justify-self: left;
+    border: 1px solid darkgrey;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 34px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    padding-top: 10px;
+    background-color: #f5f0f023;
+    display: none; /* Hide main content initially */
+    flex-direction: column;
+
+
+}
+
+.splash-screen h2{
+    font-size: 2rem;
+    font-family: 'Fira Code';
+}
+
+/* Styling for the icons in the .opts container */
+.opts {
+    margin: 20px 20px 0 0;
+    display: flex;
+    gap: 10px;
+}
+
+.opts i {
+    font-size: 1.1rem;
+    color: black;
+    position: relative; /* Required to position the tooltip */
+}
+
+.opts i:hover {
+    color: rgb(133, 133, 133);
+}
+
+/* Tooltip styling */
+
+.tooltip {
+    font-family: "Inter";
+    visibility: hidden;
+    background-color: #1f1f1ffc;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    padding: 15px;
+    border-radius: 10px;
+    position: absolute;
+    top: 130%; /* Position the tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+    font-size: 0.8rem; /* Slightly smaller font for the tooltip */
+}
+
+/* Arrow for the tooltip */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* Arrow at the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+/* Show tooltip on hover */
+.opts i:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/*input conhtainner      */
+
+.input-container {
+    border-radius: 10px;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    border: 2px solid #ccc;
+    gap: 10px; /* Space between input and button */
+    margin-top: 20px; /* Add some space above the input */
+}
+
+input {
+    resize: none; /* Prevent resizing */
+    overflow: hidden; /* Hide scrollbars */
+    height: auto; /* Automatic height based on content */
+    word-wrap: break-word;
+    padding: 10px;
+    background-color: transparent;
+    max-height: 99px;
+    width: 90%;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+#share-button {
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#share-button:focus {
+    outline: none;
+}
+
+
+/* title */
+
+.title {
+    font-weight: 200;
+    font-size: larger;
+    display: flex;
+    font-family: 'Fira Code';
+}
+
+.title h5 {
+    margin-top: -20px;
+}
+
+.title b{
+    color: red;
+    font-size: 1.09rem;
+}
+
+
+
+

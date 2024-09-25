@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="importmap">
+        {
+            "imports": {
+                "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfiniteGPT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="splash-screen">
+        <dotlottie-player src="https://lottie.host/67ad7680-6fc0-4c36-a78c-d93af5076b4a/HC2voL1uwD.json"
+         background="#ffffff0a" speed="7" 
+         style="width: 400px; height: auto;" 
+         direction="1" 
+         playMode="normal" 
+         loop autoplay>
+        </dotlottie-player>
+    
+        <h2>InfiniteGPT</h2>
+    </div>
+    <div class="container">
+
+
+        <div class="title">
+            <dotlottie-player src="https://lottie.host/67ad7680-6fc0-4c36-a78c-d93af5076b4a/HC2voL1uwD.json"
+            background="#ffffff0a" speed="7" 
+            style="width: 90px; 
+                height: 90px;
+                padding: 9px;
+                margin: 10px;
+                margin-top: 19px;
+                border-radius: 40%;
+                background-color: rgba(224, 224, 224, 0.337);
+                " 
+            direction="1" 
+            playMode="normal" 
+            loop autoplay>
+            </dotlottie-player>
+            <div style="margin-top: 20px;">  
+
+                <h3>InfiniteGPT</h3>
+                <h5>Best Free <b>Generative AI</b> For Students.</h3>
+                     
+            </div>
+        </div>
+        
+        <div class="chat">      
+              
+            <ul class="list">
+                <li class="com"><span>Hello! 🙏🙏🙏, How CAN I HELP YOU TODAY?</span> </li>
+            </ul>
+
+            <div class="input-container">
+                <input id="text-input" type="text" placeholder="Enter your message here..." />
+                <button id="share-button">
+                    <dotlottie-player 
+                        src="https://lottie.host/9152b619-63f6-434b-ae97-a22da862a40f/rvPMyAwXVO.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 60px; height: 60px;" 
+                        direction="1" 
+                        playMode="normal" 
+                        loop 
+                        autoplay>
+                    </dotlottie-player>
+                </button>
+            </div>
+
+            <p style="font-family: 'Inter'; font-size: 0.8rem;">InfiniteGpt can make mistakes. Check important info.</p>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
