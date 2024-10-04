@@ -1,3 +1,5 @@
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 setTimeout(() => {
     const splashScreen = document.querySelector('.splash-screen');
     const mainContent = document.querySelector('.container');
