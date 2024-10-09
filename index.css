@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+.ad {
+    width: 200px;
+}
+
 .splash-screen {
     position: fixed;
     top: 0;
